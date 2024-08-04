@@ -35,13 +35,22 @@ php-mvc/
 └── Makefile                   # Makefile for project automation
 ```
 
+### Quick Links
+
+Application: Access your application at http://php-mvc-2024.local.
+
+Traefik Dashboard: Access the Traefik dashboard at http://traefik.php-mvc-2024.local:8080.
+
+phpMyAdmin: Access phpMyAdmin at http://pma.php-mvc-2024.local.
+
 ### Customization
 
 - **GitHub URL**: Replace `git@github.com:eldarmoore/php-mvc-2024.git` with the actual URL of your GitHub repository.
 - **Project Name**: Update all references to `php-mvc-2024` with your actual project name.
 
-### Traefik
+### Traefik Documentation
 
+https://doc.traefik.io/traefik/getting-started/quick-start/
 
 ### Usage
 

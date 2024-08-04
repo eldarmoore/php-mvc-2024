@@ -31,13 +31,27 @@ services:
     volumes:
       - db_data:/var/lib/mysql
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: ${PROJECT_NAME}_phpmyadmin
+    platform: linux/amd64  # Specify the platform
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.phpmyadmin.rule=Host(`pma.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.phpmyadmin.entrypoints=web"
+    depends_on:
+      - db
+
   traefik:
     image: traefik:v2.4
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--entrypoints.web.address=:80"
-      - "--entrypoints.dashboard.address=:8081"  # New entrypoint for the dashboard
+      - "--entrypoints.dashboard.address=:8081"
       - "--api.dashboard=true"
       - "--api.debug=true"
     ports:
