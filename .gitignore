@@ -1,0 +1,62 @@
+# Composer vendor directory
+/vendor/
+
+# Composer dependencies
+/composer.lock
+
+# Environment variables
+/.env
+
+# Laravel specific files (if applicable)
+Homestead.yaml
+Homestead.json
+.env.testing
+
+# Node modules (if using Node.js or npm for frontend)
+node_modules/
+
+# Temporary files and directories
+/tmp/
+/temp/
+/cache/
+
+# MacOS system files
+.DS_Store
+
+# Log files
+*.log
+
+# IDE and editor files
+/.idea/
+/.vscode/
+*.swp
+
+# PHPUnit result cache
+.phpunit.result.cache
+
+# Coverage reports
+coverage/
+
+# Docker-related files
+docker-compose.override.yml
+.docker/
+
+# PHPStorm project files
+/.phpstorm.meta.php/
+
+# PHP-specific extensions
+*.php~
+*.phar
+
+# SFTP configuration file
+.sftp-config.json
+
+# Lock file
+yarn.lock
+
+# Backup files
+*~
+
+# Miscellaneous
+*.bak
+*.tmp
