@@ -1,8 +1,7 @@
 <?php
 
-require_once "controller.php";
+require_once "src/controllers/Products.php";
 
-$controller = new Controller();
+$controller = new Products();
 
 $controller->index();
-
